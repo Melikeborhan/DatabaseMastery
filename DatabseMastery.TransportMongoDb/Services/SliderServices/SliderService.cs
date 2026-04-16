@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
 using DatabseMastery.TransportMongoDb.Entities;
 using DatabseMastery.TransportMongoDb.Settings;
@@ -53,7 +53,7 @@ namespace DatabseMastery.TransportMongoDb.Services.SliderServices
         public async Task UpdateSliderAsync(UpdateSliderDto updateSliderDto)
         {
             var values = _mapper.Map<Slider>(updateSliderDto);
-            await _sliderCollection.FindOneAndReplaceAsync (x => x.SliderId == updateSliderDto.SliderId,values)
+            await _sliderCollection.FindOneAndReplaceAsync (x => x.SliderId == updateSliderDto.SliderId,values);
         }
     }
 }
