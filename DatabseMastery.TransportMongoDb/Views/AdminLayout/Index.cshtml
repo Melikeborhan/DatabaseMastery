@@ -18,10 +18,26 @@
 		@await Component.InvokeAsync("_AdminLayoutTopBarComponentPartial")
             
 		@await Component.InvokeAsync("_AdminLayoutSidebarComponentPartial")
-            
-          
-            @RenderBody()
-    
+
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                  
+
+                    @RenderBody()
+
+                </div> <!-- container-fluid -->
+            </div> <!-- content -->
+            <!-- Footer Start -->
+       
+            <!-- end Footer -->
+
+        </div>
+
            
         </div>
     @await Component.InvokeAsync("_AdminLayoutScriptsComponentPartial")
