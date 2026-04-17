@@ -1,5 +1,6 @@
 using DatabseMastery.TransportMongoDb.Services.BrandServices;
 using DatabseMastery.TransportMongoDb.Services.SliderServices;
+using DatabseMastery.TransportMongoDb.Services.OfferServices;
 using DatabseMastery.TransportMongoDb.Settings;
 using Microsoft.Extensions.Options;
 using System.Reflection;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
-builder.Services.AddScoped<IOfferService,IOfferService>();
+builder.Services.AddScoped<IOfferService, OfferService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
