@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DatabseMastery.TransportMongoDb.Dtos.BrandDtos;
+using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
 using DatabseMastery.TransportMongoDb.Entities;
 
@@ -19,6 +20,12 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<Brand, CreateBrandDto>().ReverseMap();
             CreateMap<Brand, UpdateBrandDto>().ReverseMap();
             CreateMap<Brand, GetBrandByIdDto>().ReverseMap();
+
+
+             CreateMap<Offer,ResultOfferDto>().ReverseMap();
+            CreateMap<Offer, CreateOfferDto>().ReverseMap();
+            CreateMap<Offer, UpdateOfferDto>().ReverseMap();
+            CreateMap<Offer, GetOfferByIdDto>().ReverseMap();
 
         }
 
