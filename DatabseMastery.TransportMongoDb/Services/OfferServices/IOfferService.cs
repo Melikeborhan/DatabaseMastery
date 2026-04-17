@@ -1,8 +1,8 @@
-﻿using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
+using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
 
 namespace DatabseMastery.TransportMongoDb.Services.OfferServices
 {
-    public interface IOfferServise
+    public interface IOfferService
     {
         Task<List<ResultOfferDto>> GetAllOfferAsync();
         Task CreateOfferAsync(CreateOfferDto createOfferDto);

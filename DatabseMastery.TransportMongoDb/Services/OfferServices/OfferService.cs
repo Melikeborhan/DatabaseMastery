@@ -6,7 +6,7 @@ using MongoDB.Driver;
 
 namespace DatabseMastery.TransportMongoDb.Services.OfferServices
 {
-    public class OfferService : IOfferServise
+    public class OfferService : IOfferService
     {
         private readonly IMongoCollection<Offer> _offerCollection;
         private readonly IMapper _mapper;
