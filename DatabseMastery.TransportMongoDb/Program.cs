@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<DatabseMastery.TransportMongoDb.Services.BrandServices.IBrandService, DatabseMastery.TransportMongoDb.Services.BrandServices.BrandService>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettingsKey"));
 builder.Services.AddScoped<IDatabaseSettings>(sp =>
