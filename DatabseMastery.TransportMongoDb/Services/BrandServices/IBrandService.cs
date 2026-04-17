@@ -4,10 +4,10 @@ namespace DatabseMastery.TransportMongoDb.Services.BrandServices
 {
     public interface IBrandService
     {
-        Task<List<ResultBrandDto>> GetAllSlidersAsync();
-        Task CreateBrandAsync(CreateBrandDto createSliderDto);
-        Task UpdateSliderAsync(UpdateBrandDto updateSliderDto);
-        Task<GetBrandByIdDto> GetSliderByIdAsync(string id);
+        Task<List<ResultBrandDto>> GetAllBrandAsync();
+        Task CreateBrandAsync(CreateBrandDto createBrandDto);
+        Task UpdateBrandAsync(UpdateBrandDto updateBrandDto);
+        Task<GetBrandByIdDto> GetBrandByIdAsync(string id);
         Task DeleteBrandAsync(string id);
     }
 }
