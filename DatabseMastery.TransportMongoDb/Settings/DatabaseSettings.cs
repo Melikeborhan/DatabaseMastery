@@ -8,6 +8,8 @@
         public string BrandCollectionName { get; set; }
         public string OfferCollectionName { get; set; }
 
+        public string AboutCollectionName { get; set; }
+
 
     }
 }
