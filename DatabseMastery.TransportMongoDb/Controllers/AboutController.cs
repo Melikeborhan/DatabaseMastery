@@ -46,7 +46,7 @@ namespace DatabseMastery.TransportMongoDb.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> UpdateAboutAsync(string id)//güncellenecek değer id ye gore gelecek 
+        public async Task<IActionResult> UpdateAbout(string id)//güncellenecek değer id ye gore gelecek 
         {
             var values = await _aboutService.GetAboutByIdAsync(id);
             return View(values);
