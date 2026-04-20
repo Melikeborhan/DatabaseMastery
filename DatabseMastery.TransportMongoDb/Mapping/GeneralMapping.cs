@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DatabseMastery.TransportMongoDb.Dtos.AboutDtos;
 using DatabseMastery.TransportMongoDb.Dtos.BrandDtos;
+using DatabseMastery.TransportMongoDb.Dtos.GetInTouchDtos;
 using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
 using DatabseMastery.TransportMongoDb.Entities;
@@ -33,6 +34,12 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<About, CreateAboutDto>().ReverseMap();
             CreateMap<About, UpdateAboutDto>().ReverseMap();
             CreateMap<About, GetAboutByIdDto>().ReverseMap();
+
+
+             CreateMap<GetInTouchSection, ResultGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouchSection, CreateGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouchSection, UpdateGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouchSection, GetGetInTouchByIdDto>().ReverseMap();
 
         }
 
