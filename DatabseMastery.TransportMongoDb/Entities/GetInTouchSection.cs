@@ -7,7 +7,7 @@ namespace DatabseMastery.TransportMongoDb.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public int GetTouchSectionId { get; set; }
+        public string GetTouchSectionId { get; set; }
         public string BadgeTitle { get; set; }
         public string MainTitle { get; set; }
         public string Description { get; set; }

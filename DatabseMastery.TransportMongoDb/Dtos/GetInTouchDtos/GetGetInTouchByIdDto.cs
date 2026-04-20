@@ -2,7 +2,7 @@
 {
     public class GetGetInTouchByIdDto
     {
-        public int GetTouchSectionId { get; set; }
+        public string GetTouchSectionId { get; set; }
         public string BadgeTitle { get; set; }
         public string MainTitle { get; set; }
         public string Description { get; set; }
