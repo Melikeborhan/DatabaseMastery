@@ -752,7 +752,7 @@
     <div class="page-header">
         <div class="header-top">
             <div class="header-line"></div>
-            <span class="header-label">HAKKIMIZDA İÇERİĞİ</span>
+            <span class="header-label">HAKKIMIZDA İÇERİĞİ DÜZENLEME</span>
         </div>
         <h1 class="page-title">
             <span class="title-highlight">Kurumsal</span> Hikayenizi Anlatın
@@ -764,6 +764,7 @@
 
     <!-- Split Layout -->
     <form method="post" id="aboutForm">
+        <input  type="hidden" asp-for="AboutId" />
         <div class="split-layout">
             <!-- Form Column -->
             <div class="form-column">
@@ -880,7 +881,7 @@
 
                 <!-- Actions -->
                 <div class="form-actions">
-                    <a href="/Admin/About/Index" class="btn btn-secondary">
+                    <a href="/About/AboutList" class="btn btn-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
