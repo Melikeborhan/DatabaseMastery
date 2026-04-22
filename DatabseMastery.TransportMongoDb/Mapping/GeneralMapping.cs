@@ -5,6 +5,7 @@ using DatabseMastery.TransportMongoDb.Dtos.GetInTouchDtos;
 using DatabseMastery.TransportMongoDb.Dtos.HowItWorksDtos;
 using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
+using DatabseMastery.TransportMongoDb.Dtos.TestimonialDtos;
 using DatabseMastery.TransportMongoDb.Entities;
 
 namespace DatabseMastery.TransportMongoDb.Mapping
@@ -25,7 +26,7 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<Brand, GetBrandByIdDto>().ReverseMap();
 
 
-             CreateMap<Offer,ResultOfferDto>().ReverseMap();
+            CreateMap<Offer,ResultOfferDto>().ReverseMap();
             CreateMap<Offer, CreateOfferDto>().ReverseMap();
             CreateMap<Offer, UpdateOfferDto>().ReverseMap();
             CreateMap<Offer, GetOfferByIdDto>().ReverseMap();
@@ -37,7 +38,7 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<About, GetAboutByIdDto>().ReverseMap();
 
 
-             CreateMap<GetInTouchSection, ResultGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouchSection, ResultGetInTouchDto>().ReverseMap();
             CreateMap<GetInTouchSection, CreateGetInTouchDto>().ReverseMap();
             CreateMap<GetInTouchSection, UpdateGetInTouchDto>().ReverseMap();
             CreateMap<GetInTouchSection, GetGetInTouchByIdDto>().ReverseMap(); 
@@ -46,6 +47,12 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<HowItWorks, CreateHowItWorksDto>().ReverseMap();
             CreateMap<HowItWorks, UpdateHowItWorksDto>().ReverseMap();
             CreateMap<HowItWorks, GetHowItWorksByIdDto>().ReverseMap();
+
+
+            CreateMap<Testimonial, ResultTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, CreateTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, UpdateTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, GetTestimonialByIdDto>().ReverseMap();
 
         }
 
