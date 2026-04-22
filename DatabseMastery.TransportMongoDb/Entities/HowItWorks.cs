@@ -1,4 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
 namespace DatabseMastery.TransportMongoDb.Entities
@@ -11,7 +11,7 @@ namespace DatabseMastery.TransportMongoDb.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public string IconUrl { get; set; }
-        public string Status { get; set; }
+        public bool Status { get; set; }
 
     }
 }
