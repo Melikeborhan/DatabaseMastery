@@ -10,6 +10,7 @@
 
         public string AboutCollectionName { get; set; }
         public string GetInTouchCollectionName { get; set; }
+        public string HowItWorksCollectionName { get; set; }
 
 
     }
