@@ -1,4 +1,4 @@
-ï»¿using AutoMapper;
+using AutoMapper;
 using DatabseMastery.TransportMongoDb.Dtos.TestimonialDtos;
 using DatabseMastery.TransportMongoDb.Entities;
 using DatabseMastery.TransportMongoDb.Settings;
@@ -12,7 +12,7 @@ namespace DatabseMastery.TransportMongoDb.Services.TestimonialServices
         private readonly IMongoCollection<Testimonial> _testimonialCollection;
         private readonly IMapper _mapper;
 
-        //bunu hiyerarsÄ±k olarak dusunebÄ±lÄ±rÄ±z Ä±lk katmanda connectÄ±onstrÄ±ng->database->Table  olarak katmanlÄ± dusunebÄ±lÄ±rÄ±z 
+        //bunu hiyerarsýk olarak dusunebýlýrýz ýlk katmanda connectýonstrýng->database->Table  olarak katmanlý dusunebýlýrýz 
         public TestimonialServices(IMapper mapper, IDatabaseSettings _databaseSettings)
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
@@ -21,7 +21,7 @@ namespace DatabseMastery.TransportMongoDb.Services.TestimonialServices
             _mapper = mapper;
         }
 
-        //create Ä±slemÄ±nde once mapleme yapÄ±lÄ±r daha sonra Ä±slem yapÄ±lÄ±r 
+        //create ýslemýnde once mapleme yapýlýr daha sonra ýslem yapýlýr 
         public async Task CreateTestimonialAsync(CreateTestimonialDto createTestimonialDto)
         {
             var value = _mapper.Map<Testimonial>(createTestimonialDto);
@@ -35,7 +35,7 @@ namespace DatabseMastery.TransportMongoDb.Services.TestimonialServices
         }
 
 
-        //listeleme iÅŸleminde Ã¶nce iÅŸlem yapÄ±lÄ±r sonra maplenir
+        //listeleme iþleminde önce iþlem yapýlýr sonra maplenir
         public async Task<List<ResultTestimonialDto>> GetAllTestimonialsAsync()
         {
             var values = await _testimonialCollection.Find(x => true).ToListAsync();
