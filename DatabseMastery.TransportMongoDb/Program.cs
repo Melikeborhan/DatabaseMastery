@@ -6,6 +6,7 @@ using DatabseMastery.TransportMongoDb.Settings;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 using DatabseMastery.TransportMongoDb.Services.GetInTouchServices;
+using DatabseMastery.TransportMongoDb.Services.HowItWorksServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IGetInTouchService, GetInTouchService>();
+builder.Services.AddScoped<IHowItWorksServices, HowItWorksServices>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
