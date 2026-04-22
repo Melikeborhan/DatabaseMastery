@@ -2,6 +2,7 @@
 using DatabseMastery.TransportMongoDb.Dtos.AboutDtos;
 using DatabseMastery.TransportMongoDb.Dtos.BrandDtos;
 using DatabseMastery.TransportMongoDb.Dtos.GetInTouchDtos;
+using DatabseMastery.TransportMongoDb.Dtos.HowItWorksDtos;
 using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
 using DatabseMastery.TransportMongoDb.Entities;
@@ -39,7 +40,12 @@ namespace DatabseMastery.TransportMongoDb.Mapping
              CreateMap<GetInTouchSection, ResultGetInTouchDto>().ReverseMap();
             CreateMap<GetInTouchSection, CreateGetInTouchDto>().ReverseMap();
             CreateMap<GetInTouchSection, UpdateGetInTouchDto>().ReverseMap();
-            CreateMap<GetInTouchSection, GetGetInTouchByIdDto>().ReverseMap();
+            CreateMap<GetInTouchSection, GetGetInTouchByIdDto>().ReverseMap(); 
+            
+            CreateMap<HowItWorks, ResultHowItWorksDto>().ReverseMap();
+            CreateMap<HowItWorks, CreateHowItWorksDto>().ReverseMap();
+            CreateMap<HowItWorks, UpdateHowItWorksDto>().ReverseMap();
+            CreateMap<HowItWorks, GetHowItWorksByIdDto>().ReverseMap();
 
         }
 
