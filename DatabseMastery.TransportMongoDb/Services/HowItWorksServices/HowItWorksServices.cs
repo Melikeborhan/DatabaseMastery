@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using DatabseMastery.TransportMongoDb.Dtos.HowItWorksDtos;
 using DatabseMastery.TransportMongoDb.Entities;
 using DatabseMastery.TransportMongoDb.Settings;
@@ -36,10 +36,16 @@ namespace DatabseMastery.TransportMongoDb.Services.HowItWorksServices
             return _mapper.Map<List<ResultHowItWorksDto>>(values);
         }
 
-        public async Task UpdateHowItWorksDtoAsync(UpdateHowItWorksDto updateHowItWorksDto)
+        public async Task UpdateHowItWorksAsync(UpdateHowItWorksDto updateHowItWorksDto)
         {
             var values = _mapper.Map<HowItWorks>(updateHowItWorksDto);
             await _howItWorksServices.FindOneAndReplaceAsync(x => x.HowItWorksId == updateHowItWorksDto.HowItWorksId, values);
+        }
+
+        public async Task<GetHowItWorksByIdDto> GetHowItWorksByIdDtoAsync(string id)
+        {
+            var values = await _howItWorksServices.Find(x => x.HowItWorksId == id).FirstOrDefaultAsync();
+            return _mapper.Map<GetHowItWorksByIdDto>(values);
         }
     }
 }
