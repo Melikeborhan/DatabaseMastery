@@ -1,9 +1,11 @@
-﻿<section class="section pt-85 bg-worldmap">
+﻿@model List<ResultHowItWorksDto>
+
+<section class="section pt-85 bg-worldmap">
     <div class="container">
         <div class="text-center">
             <img class="mb-15" src="/templates/assets/imgs/template/icons/favicon.svg" alt="transp">
             <h2 class="color-brand-2 mb-20">Nasıl Çalışıyoruz?</h2>
-            <p class="font-md color-grey-700">You choose the cities where you’d like to deliver. All deliveries are within a specific service area and delivery services vary by location. Whatever the mode or requirement, we will find and book the ideal expedited shipping solution to ensure a timely delivery.</p>
+            <p class="font-md color-grey-700">Teslimat yapmak istediğiniz şehirleri siz seçersiniz. Tüm teslimatlar belirli bir hizmet alanı dahilinde gerçekleştirilir ve teslimat hizmetleri konuma göre farklılık gösterir. Mod veya gereksinim ne olursa olsun, zamanında teslim sağlamak için ideal ekspres kargo çözümünü bulup rezerve edeceğiz.</p>
         </div>
         <div class="row mt-50">
             <div class="col-lg-6 mb-30">
@@ -12,49 +14,25 @@
                     <div class="box-info-bottom-img">
                         <div class="image-play"><img class="mb-15" src="/templates/assets/imgs/template/icons/play.svg" alt="transp"></div>
                         <div class="info-play">
-                            <h4 class="color-white mb-15">We have 25 years experience in this passion</h4>
-                            <p class="font-sm color-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            <h4 class="color-white mb-15">Bu alanda 25 yıllık deneyime sahibiz</h4>
+                            <p class="font-sm color-white">Yılların verdiği tecrübe ve güvenilirlikle, her teslimatı özenle tamamlıyor ve müşterilerimizin memnuniyetini her zaman ön planda tutuyoruz.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mb-30">
                 <ul class="list-how-works">
-                    <li>
-                        <div class="image-how"> <span class="img"> <img src="/templates/assets/imgs/page/homepage1/order.png" alt="transp"></span></div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Customer places order</h5>
-                            <p class="font-md color-grey-700">Inspection and quality check of goods</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-how"> <span class="img"> <img src="/templates/assets/imgs/page/homepage1/payment.png" alt="transp"></span></div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Payment successful</h5>
-                            <p class="font-md color-grey-700">Payoneer, Paypal, or Visa master card</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-how"> <span class="img"> <img src="/templates/assets/imgs/page/homepage1/warehouse.png" alt="transp"></span></div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Warehouse receives order</h5>
-                            <p class="font-md color-grey-700">Check the accuracy of the goods.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-how"> <span class="img"> <img src="/templates/assets/imgs/page/homepage1/picked.png" alt="transp"></span></div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Item picked, packed & shipped</h5>
-                            <p class="font-md color-grey-700">Ship the goods to a local carrier</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-how"> <span class="img"> <img src="/templates/assets/imgs/page/homepage1/delivery.png" alt="transp"></span></div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Delivered & Measure success</h5>
-                            <p class="font-md color-grey-700">Update order status on the system</p>
-                        </div>
-                    </li>
+                    @foreach(var item in Model){
+                        <li>
+                            <div class="image-how"> <span class="img"> <img src="@item.IconUrl" alt="transp"></span></div>
+                            <div class="info-how">
+                                <h5 class="color-brand-2">@item.Title</h5>
+                                <p class="font-md color-grey-700">@item.Description</p>
+                            </div>
+                        </li>
+                    }
+                    
+                    
                 </ul>
             </div>
         </div>
