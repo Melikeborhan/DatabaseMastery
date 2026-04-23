@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="DatabseMastery\TransportMongoDb\" />
-    <Folder Include="Views\Question\" />
   </ItemGroup>
 
 </Project>

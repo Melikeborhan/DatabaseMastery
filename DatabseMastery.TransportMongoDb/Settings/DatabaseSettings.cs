@@ -12,6 +12,7 @@
         public string HowItWorksCollectionName { get; set; }
         public string TestimonialCollectionName { get; set; } 
         public string ProjectSectionCollectionName { get; set; }
+        public string QuestionCollectionName { get; set; }
 
     }
 }
