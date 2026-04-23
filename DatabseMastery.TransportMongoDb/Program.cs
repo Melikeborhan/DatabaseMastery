@@ -8,6 +8,7 @@ using System.Reflection;
 using DatabseMastery.TransportMongoDb.Services.GetInTouchServices;
 using DatabseMastery.TransportMongoDb.Services.HowItWorksServices;
 using DatabseMastery.TransportMongoDb.Services.TestimonialServices;
+using DatabseMastery.TransportMongoDb.Services.ProjectSectionServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IGetInTouchService, GetInTouchService>();
 builder.Services.AddScoped<IHowItWorksServices, HowItWorksServices>();
 builder.Services.AddScoped<ITestimonialServices, TestimonialServices>();
+builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
