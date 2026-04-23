@@ -5,6 +5,7 @@ using DatabseMastery.TransportMongoDb.Dtos.GetInTouchDtos;
 using DatabseMastery.TransportMongoDb.Dtos.HowItWorksDtos;
 using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
 using DatabseMastery.TransportMongoDb.Dtos.ProjectSectionDtos;
+using DatabseMastery.TransportMongoDb.Dtos.QuestionDtos;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
 using DatabseMastery.TransportMongoDb.Dtos.TestimonialDtos;
 using DatabseMastery.TransportMongoDb.Entities;
@@ -60,6 +61,11 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<ProjectSection, CreateProjectSectionDto>().ReverseMap();
             CreateMap<ProjectSection, UpdateProjectSectionDto>().ReverseMap();
             CreateMap<ProjectSection, GetProjectSectionByIdDto>().ReverseMap();
+            
+            CreateMap<Question, ResultQuestionDto>().ReverseMap();
+            CreateMap<Question, CreateQuestionDto>().ReverseMap();
+            CreateMap<Question, UpdateQuestionDto>().ReverseMap();
+            CreateMap<Question, GetQuestionByIdDto>().ReverseMap();
 
             
 
