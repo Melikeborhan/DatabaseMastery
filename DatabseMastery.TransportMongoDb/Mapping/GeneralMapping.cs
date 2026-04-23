@@ -4,6 +4,7 @@ using DatabseMastery.TransportMongoDb.Dtos.BrandDtos;
 using DatabseMastery.TransportMongoDb.Dtos.GetInTouchDtos;
 using DatabseMastery.TransportMongoDb.Dtos.HowItWorksDtos;
 using DatabseMastery.TransportMongoDb.Dtos.OfferDtos;
+using DatabseMastery.TransportMongoDb.Dtos.ProjectSectionDtos;
 using DatabseMastery.TransportMongoDb.Dtos.SliderDtos;
 using DatabseMastery.TransportMongoDb.Dtos.TestimonialDtos;
 using DatabseMastery.TransportMongoDb.Entities;
@@ -53,6 +54,14 @@ namespace DatabseMastery.TransportMongoDb.Mapping
             CreateMap<Testimonial, CreateTestimonialDto>().ReverseMap();
             CreateMap<Testimonial, UpdateTestimonialDto>().ReverseMap();
             CreateMap<Testimonial, GetTestimonialByIdDto>().ReverseMap();
+
+
+            CreateMap<ProjectSection, ResultProjectSectionDto>().ReverseMap();
+            CreateMap<ProjectSection, CreateProjectSectionDto>().ReverseMap();
+            CreateMap<ProjectSection, UpdateProjectSectionDto>().ReverseMap();
+            CreateMap<ProjectSection, GetProjectSectionByIdDto>().ReverseMap();
+
+            
 
         }
 
