@@ -10,6 +10,7 @@ using DatabseMastery.TransportMongoDb.Services.HowItWorksServices;
 using DatabseMastery.TransportMongoDb.Services.TestimonialServices;
 using DatabseMastery.TransportMongoDb.Services.ProjectSectionServices;
 using DatabseMastery.TransportMongoDb.Services.QuestionServices;
+using DatabseMastery.TransportMongoDb.Services.ShipmentServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IHowItWorksServices, HowItWorksServices>();
 builder.Services.AddScoped<ITestimonialServices, TestimonialServices>();
 builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IShipmentService, ShipmentService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
