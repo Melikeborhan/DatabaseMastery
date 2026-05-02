@@ -1,0 +1,1 @@
+const { MongoClient } = require('mongodb'); async function run() { const client = new MongoClient('mongodb://127.0.0.1:27017'); await client.connect(); const db = client.db('TransportationDb'); const shipments = await db.collection('Shipments').find({}).toArray(); console.log(JSON.stringify(shipments, null, 2)); await client.close(); } run().catch(console.dir);
