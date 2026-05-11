@@ -1,4 +1,4 @@
-﻿using DatabseMastery.TransportMongoDb.Dtos.ShipmentDtos;
+using DatabseMastery.TransportMongoDb.Dtos.ShipmentDtos;
 
 namespace DatabseMastery.TransportMongoDb.Services.ShipmentServices
 {
@@ -9,5 +9,6 @@ namespace DatabseMastery.TransportMongoDb.Services.ShipmentServices
         Task UpdateShipmentAsync(UpdateShipmentDto updateShipmentDto);
         Task<GetShipmentByIdDto> GetShipmentByIdAsync(string id);
         Task DeleteShipmentAsync(string id);
+        Task<GetShipmentByIdDto> GetShipmentByTrackingNumberAsync(string trackingNumber);
     }
 }

@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using DatabseMastery.TransportMongoDb.Dtos.ShipmentDtos;
 using DatabseMastery.TransportMongoDb.Entities;
 using DatabseMastery.TransportMongoDb.Settings;
@@ -52,6 +52,11 @@ namespace DatabseMastery.TransportMongoDb.Services.ShipmentServices
         {
             var values = _mapper.Map<Shipment>(updateShipmentDto);
             await _shipmentCollection.FindOneAndReplaceAsync(x => x.ShipmentId == updateShipmentDto.ShipmentId, values);
+        }
+        public async Task<GetShipmentByIdDto> GetShipmentByTrackingNumberAsync(string trackingNumber)
+        {
+            var value = await _shipmentCollection.Find(x => x.TrackingNumber == trackingNumber).FirstOrDefaultAsync();
+            return _mapper.Map<GetShipmentByIdDto>(value);
         }
     }
 }

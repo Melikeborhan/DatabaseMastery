@@ -11,6 +11,7 @@ using DatabseMastery.TransportMongoDb.Services.TestimonialServices;
 using DatabseMastery.TransportMongoDb.Services.ProjectSectionServices;
 using DatabseMastery.TransportMongoDb.Services.QuestionServices;
 using DatabseMastery.TransportMongoDb.Services.ShipmentServices;
+using DatabseMastery.TransportMongoDb.Services.ShipmentTrackingServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddScoped<ITestimonialServices, TestimonialServices>();
 builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
 builder.Services.AddScoped<IShipmentService, ShipmentService>();
+builder.Services.AddScoped<IShipmentTrackingService, ShipmentTrackingService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

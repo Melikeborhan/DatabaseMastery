@@ -18,6 +18,6 @@ namespace DatabseMastery.TransportMongoDb.Dtos.ShipmentDtos
         public string Address { get; set; }
         public DateTime CreatedDate { get; set; }
         public string CurrentStatus { get; set; }
-       
+        public List<ShipmentTracking> Trackings { get; set; }
     }
 }
