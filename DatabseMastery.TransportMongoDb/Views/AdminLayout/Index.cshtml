@@ -39,6 +39,7 @@
            
         </div>
     @await Component.InvokeAsync("_AdminLayoutScriptsComponentPartial")
-    
+   
+	@await RenderSectionAsync("Scripts", required: false) //kýsaca bu kýsým sayfaya özel scriptler eklemek istediðimizde kullanacaðýmýz alaný oluþturuyoruz. Eðer bu alaný oluþturmazsak sayfaya özel scriptler ekleyemeyiz.
     </body>
 </html>
