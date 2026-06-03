@@ -58,5 +58,28 @@ namespace DatabseMastery.TransportMongoDb.Services.ShipmentServices
             var value = await _shipmentCollection.Find(x => x.TrackingNumber == trackingNumber).FirstOrDefaultAsync();
             return _mapper.Map<GetShipmentByIdDto>(value);
         }
+
+        public async Task<long> GetTotalShipmentCauntAsync()
+        {
+           return await _shipmentCollection.CountDocumentsAsync(FilterDefinition<Shipment>.Empty);
+        }
+
+        public async Task<long> GetDeliveryShipmentCauntAsync()
+        {
+           var filter = Builders<Shipment>.Filter.Eq(x => x.CurrentStatus, "Teslim Edildi");
+            return await _shipmentCollection.CountDocumentsAsync(filter);
+        }
+
+        public async Task<int> GetDistinctDestinationCityCauntAsync()
+        {
+            var cities = await _shipmentCollection.DistinctAsync<string>("DestinationCity", FilterDefinition<Shipment>.Empty);
+            return await cities.ToListAsync().ContinueWith(t => t.Result.Count);
+        }
+
+        public async Task<long> GetInDistributionShipmentCauntAsync()
+        {
+            var filter = Builders<Shipment>.Filter.Eq(x => x.CurrentStatus, "Dağıtımda");
+            return await _shipmentCollection.CountDocumentsAsync(filter);
+        }
     }
 }
